@@ -22,8 +22,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat "docker build -t apiGateway-image ."
-                bat "docker run -p 8060:8060 -d --name apiGateway-container apiGateway-image"
+                bat "docker build -t gateway-image ."
+                bat "docker run -p 8060:8060 -d --name gateway-container gateway-image"
             }
         }
     }
